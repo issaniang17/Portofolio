@@ -123,7 +123,7 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, 30%);
-    row-gap: 4em;
+    row-gap: 6em;
     column-gap: 2em;
     grid-template-areas: "projet1 projet2""projet3 projet4""projet5 projet6";
     .capture{
@@ -175,4 +175,36 @@ body{
     padding: 1em;
     color: white;
 }
+}
+.propos{
+    margin-top: 10em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+    grid-template-areas: "moi-header moi-contenu";
+    .moi-propos{
+        grid-area: moi-header;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: end;
+        padding-right: 1.5rem;
+    }
+    .moi-contenu{
+        grid-area: moi-contenu;
+        line-height: 1.5;
+        p:nth-child(1){
+            font-size: 1.6em;
+            margin-bottom: 0.6em;
+        }
+        .info-moi{
+            color: rgba(255, 255, 255, 0.6);
+
+        }
+        a{
+            color: #D3E97A;
+            text-transform: uppercase;
+           margin-top: 2rem; 
+        }
+    }
 }
