@@ -124,7 +124,7 @@ body{
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, 30%);
     row-gap: 6em;
-    column-gap: 2em;
+    column-gap: 1em;
     grid-template-areas: "projet1 projet2""projet3 projet4""projet5 projet6";
     .capture{
         background-color: #1A1A1A;
@@ -207,4 +207,37 @@ body{
            margin-top: 2rem; 
         }
     }
+}
+footer{
+    margin: 3em 1em 1em;
+    display: flex;
+    gap: 1em;
+    line-height: 2;
+    p, label{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .mail-link, .contact{
+        width: 50%;
+        form{
+            display:flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+        input[type=submit]{
+            width: 20%;
+            border-radius: 0.5em;
+            border: none;
+            color: black;
+            background-color: #D3E97A;
+        }
+        textarea, input{
+            width: 90%;
+            padding: 0.6em;
+        }
+        textarea{
+            height: 8em;
+        }
+    }
+    
+    
 }
