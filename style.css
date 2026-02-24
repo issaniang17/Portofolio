@@ -221,6 +221,13 @@ body{
     }
     .mail-link{
         grid-area: mail;
+        a {
+            text-decoration: none;
+            span{
+                border-bottom: 1px solid #D3E97A;
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
         
     }
     .contact{
@@ -259,8 +266,23 @@ body{
 }
 @media (max-width: 700px) {
     .h2{
-        font-size: 1em;
+        font-size: 2em;
     }
+    .projet h2{
+        font-size: 1.6em;
+        margin-top: 2em;
+    }
+    .propos{
+        .moi-propos{
+        font-size: 2em;
+    }
+        .moi-contenu{
+            p:nth-child(1){
+            font-size: 1em;
+        }
+        }
+    }
+     
     .nav-links{
         display: none;
     }
@@ -269,6 +291,7 @@ body{
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 5em;
             .me, .picture, .capture, .projet2, .projet4, .projet6, .btn-links{
                 width: 100%;
             }
