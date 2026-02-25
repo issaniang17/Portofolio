@@ -16,6 +16,40 @@ body{
     margin: 2em 1.5rem 3rem 2rem;
     
 }
+.menu-button{
+    font-size: 1.5rem;
+    display: none;
+    cursor: pointer;
+}
+.menu-links{
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    height: 0;
+    width: 8rem;
+    text-align: center;
+    background-color: rgba(52, 50, 50, 0.6);
+    border-radius: 5px;
+    display: none;
+    overflow: hidden;
+    /* transition: height .3s ease-in-out; */
+    ul li{
+        margin-bottom: 1rem;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        color: #D3E97A;
+    }
+    ul {
+        list-style: none;
+        width: 100%;
+        
+    }
+}
+
 .nav-marque{
     text-transform: uppercase;
 }
@@ -26,6 +60,9 @@ body{
     a{
         text-decoration: none;
         color: white;
+    }
+    a:hover{
+        color: #D3E97A;
     }
 }
 .hero{
@@ -286,14 +323,29 @@ body{
     .nav-links{
         display: none;
     }
+    .menu-button{
+        display: block;
+    }
+    .menu-links.menu-view{
+    height: 30vh;
+    transition: height 0.3s ease-in-out;
+    width: 80vw;
+    padding-top: 1rem;
+    display: block;
+}
     .hero{
         .presentation,.container-grid, .propos{
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 5em;
+            margin-top: 8rem;
             .me, .picture, .capture, .projet2, .projet4, .projet6, .btn-links{
                 width: 100%;
+            }
+            
+            .capture{
+                padding: 0;
             }
         }
         
