@@ -18,10 +18,34 @@
                     <li><a href="">Projets</a></li>
                     <li><a href="">À propos</a></li>
                     <li><a href="">Contact</a></li>
+                    
+                </ul>
+            </div>
+            <div class="menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-links">
+                 <ul>
+                    <li><a href="">Projets</a></li>
+                    <li><a href="">À propos</a></li>
+                    <li><a href="">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <script>
+        const menuRespButton = document.querySelector('.menu-button')
+        const menuRespButtonIcon = document.querySelector('.menu-button i')
+        const menuResplink = document.querySelector('.menu-links')
+
+        menuRespButton.onclick = function(){
+            menuResplink.classList.toggle('menu-view')
+            // const isOpen = menuResplink.contains('menu-view')
+            // menuRespButtonIcon.classList = isOpen ? 
+            // 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+
+    </script>
     <main class="hero">
         <div class="presentation">
             <div class="me">
