@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About portofolio</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-marque">
+                <h2 class="h2">issa niang</h2>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">Projets</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="">Contact</a></li>
+                    
+                </ul>
+            </div>
+            <div class="menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu-links">
+                 <ul>
+                    <li><a href="">Projets</a></li>
+                    <li><a href="">À propos</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const menuRespButton = document.querySelector('.menu-button')
+        const menuRespButtonIcon = document.querySelector('.menu-button i')
+        const menuResplink = document.querySelector('.menu-links')
+
+        menuRespButton.onclick = function(){
+            menuResplink.classList.toggle('menu-view')
+            // const isOpen = menuResplink.contains('menu-view')
+            // menuRespButtonIcon.classList = isOpen ? 
+            // 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+
+    </script>
+    <main class="about-main">
+        <section class="resum">
+            <div class="title">
+                <h2>à propos de moi</h2>
+            </div>
+            <div class="about">
+                <p>Je suis un développeur basé à DAKAR, avec une formation en Réseaux et Télécommunication.</p>
+                <p class="info-moi">Je suis un développeur front-end basé à DAKAR, à la recherche d'opportunités stimulantes. Avec une formation en Réseaux et Télécommunication. Je mets un point d'honneur à privilégier l'accessibilité lors du développement. Passionné et curieux j'aime résoudre des problèmes complexes.</p>
+                <p  class="info-moi">Actuellement, j'explore Git/GitHub, Python et JavaScript et m'initie également au design avec Figma et Canva. En dehors du codage, j'aime jouer au football, les jeux vidèos et l'auto-didacte. Je continue à apprendre pour acquérir de nouvelles competences et évoluer dans la tech.</p>
+
+                <div class="bt">
+                    <button type="submit">télécharger cv <i class="fa-solid fa-download"></i></button>
+                    <a href="http://"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="http://"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="photo">
+            <img src="images/chill.png" alt="">
+        </section>
+        
+    </main>
+</body>
+</html>
