@@ -20,6 +20,8 @@ body{
     font-size: 1.5rem;
     display: none;
     cursor: pointer;
+    position: relative;
+    bottom: 0.2rem;
 }
 .menu-links{
     position: absolute;
@@ -137,8 +139,12 @@ body{
     width: 50%;
     img{
         width: 95%;
-        height: 90%;
+        height: 80%;
     }
+}
+.picture:hover{
+    transform: skewX(-5deg);
+    transition: all 0.3s cubic-bezier(.67,.09,.01,.86);
 }
 .projet{
     margin-left: 2rem;
@@ -174,6 +180,13 @@ body{
             height: 80%;
             border-radius: 3%;
         }
+    }
+    .capture:hover{
+        padding: 0;
+        img{
+            width: 100%;
+        }
+        transition: all 0.3s cubic-bezier(.67,.09,.01,.86);
     }
     .projet1{
         grid-area: projet1;    
@@ -285,6 +298,7 @@ body{
             border: none;
             color: black;
             background-color: #D3E97A;
+            cursor: pointer;
         }
         textarea, input{
             width: 90%;
@@ -370,4 +384,69 @@ body{
                 grid-area: copy;
             }
         }
+}
+/* ------ Stylisation de about ------ */
+.about-main{
+    margin: 1em 4em ;
+    display: flex;
+    flex-direction: column; 
+    gap: 3rem;
+}
+.resum{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    grid-template-areas: "titre propos" "photo photo";
+}
+.title{
+    grid-area: titre;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    
+}
+.about{
+    grid-area: propos;
+    .bt{
+        margin-top: 2rem;
+    }
+    a{
+        color: #D3E97A;
+        padding: 0.3rem;
+        border-radius: 50%;
+        margin-left: 0.5rem;
+        background-color: rgba(52, 50, 50, 0.6);
+    }
+    button{
+        background-color: #D3E97A;
+        cursor: pointer;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 1rem;
+        text-transform: uppercase;
+        border: none;
+        .fa-download{
+            background-color: #0A0A0A;
+            border-radius: 50%;
+            padding: 2%;
+            color: white;
+        }
+    }
+    p:nth-child(1){
+        margin-top: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.info-moi{
+    color:rgba(255, 255, 255, 0.8) ;
+    margin-top: 5px;
+}
+    
+}
+.photo{
+    grid-area: photo;
+    text-align: center;
+    img{
+        width: 100%;
+    }
 }
