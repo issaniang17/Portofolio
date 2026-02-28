@@ -294,7 +294,7 @@ body{
             gap: 0.5em;
         }
         input[type=submit]{
-            width: 20%;
+            width: 25%;
             border-radius: 0.5em;
             border: none;
             color: black;
@@ -371,13 +371,13 @@ body{
                 }
             }
         }
-        
         }
     .footer{
             display: grid;
             grid-template-columns: 1fr;
             grid-template-areas: "mail""contact""copy";
             row-gap: 1em;
+            margin-bottom: 1rem;
             .contact{
                 grid-area: contact;
                 
@@ -393,6 +393,39 @@ body{
                 grid-area: copy;
             }
         }
+    .about-main{
+        margin-left: 0.5rem !important;
+        margin-right: 0.5rem !important;
+        margin-top: 8rem !important;
+           .resum, .photo, .experience, .competence{
+            display: flex;
+            flex-direction: column;
+            .title, .about, .titre-about, .exp{
+                width: 100%;
+                .info-moi{
+                    font-size: 0.6rem;
+                    line-height: 1.2;
+                }
+                .en-tete{
+                    font-size: 1rem;
+                    h2{
+                        font-size: 1rem;
+                    }
+                }
+        
+            .mon-role{
+                font-size: 0.8rem;
+            }   
+            }
+           }
+           h2{
+            font-size: 1rem;
+           }
+        }
+        .footer-about{
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
 }
 /* ------ Stylisation de about ------ */
 .about-main{
@@ -401,10 +434,45 @@ body{
     flex-direction: column; 
     gap: 3rem;
 }
-.resum{
+.resum, .competence, .experience{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
+    
+}
+.titre-about{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.competence{
+    grid-template-areas: "titre skills";
+    .titre-about{
+        grid-area: titre;
+    }
+    .skill{
+        grid-area: skills;
+        color: rgba(255, 255, 255, 0.6);
+        p{
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+        .skills-rep{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        span{
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 1.5rem;
+            text-transform: uppercase;
+            padding: 0.8rem;
+            margin: 0.3rem;
+        }
+    }
+}
+.resum{
     grid-template-areas: "titre propos" "photo photo";
 }
 .title{
@@ -458,4 +526,33 @@ body{
     img{
         width: 100%;
     }
+}
+.experience{
+    grid-template-areas: "titre XP";
+    .titre-about{
+        grid-area: titre;
+    }
+    .exp{
+        grid-area: XP;
+        .description{
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.3;
+        }
+    }
+    .en-tete{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        
+        h2{
+            font-size: 1.5rem;
+        }
+        
+    }
+    
+}
+.h2-about{
+    font-size: 2rem;
+    text-transform: uppercase;
 }
